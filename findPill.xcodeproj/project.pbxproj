@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B266D0D1263EAF6E00B2360F /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D0263EAF6E00B2360F /* UserDefaultsExtension.swift */; };
+		B266D0D5263EAFA000B2360F /* PillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D4263EAFA000B2360F /* PillModel.swift */; };
+		B266D0DA263EB11500B2360F /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D9263EB11500B2360F /* LoadingScreen.swift */; };
+		B266D0DE263EB29D00B2360F /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0DD263EB29D00B2360F /* FavoritesViewController.swift */; };
+		B266D0E1263EB2EB00B2360F /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0E0263EB2EB00B2360F /* Favorites.swift */; };
+		B266D0E5263EB52B00B2360F /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0E4263EB52B00B2360F /* FavoritesTableViewCell.swift */; };
+		B266D0E8263EB6B500B2360F /* DrugDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0E7263EB6B500B2360F /* DrugDetailViewController.swift */; };
+		B266D0EC263F123D00B2360F /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B266D0EB263F123D00B2360F /* AlertView.xib */; };
+		B266D0EF263F247E00B2360F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0EE263F247E00B2360F /* AlertView.swift */; };
 		B29D5D96263DB72200441E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5D95263DB72200441E8F /* AppDelegate.swift */; };
 		B29D5D98263DB72200441E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5D97263DB72200441E8F /* SceneDelegate.swift */; };
-		B29D5D9A263DB72200441E8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5D99263DB72200441E8F /* ViewController.swift */; };
+		B29D5D9A263DB72200441E8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5D99263DB72200441E8F /* HomeViewController.swift */; };
 		B29D5D9D263DB72200441E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29D5D9B263DB72200441E8F /* Main.storyboard */; };
 		B29D5D9F263DB72300441E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29D5D9E263DB72300441E8F /* Assets.xcassets */; };
 		B29D5DA2263DB72300441E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29D5DA0263DB72300441E8F /* LaunchScreen.storyboard */; };
+		B29D5DB2263DB7DA00441E8F /* TextRecognizerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5DB1263DB7DA00441E8F /* TextRecognizerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B266D0D0263EAF6E00B2360F /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		B266D0D4263EAFA000B2360F /* PillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillModel.swift; sourceTree = "<group>"; };
+		B266D0D9263EB11500B2360F /* LoadingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		B266D0DD263EB29D00B2360F /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		B266D0E0263EB2EB00B2360F /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		B266D0E4263EB52B00B2360F /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		B266D0E7263EB6B500B2360F /* DrugDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetailViewController.swift; sourceTree = "<group>"; };
+		B266D0EB263F123D00B2360F /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		B266D0EE263F247E00B2360F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		B29D5D92263DB72200441E8F /* findPill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findPill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29D5D95263DB72200441E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B29D5D97263DB72200441E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B29D5D99263DB72200441E8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B29D5D99263DB72200441E8F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B29D5D9C263DB72200441E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B29D5D9E263DB72300441E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B29D5DA1263DB72300441E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B29D5DA3263DB72300441E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29D5DB1263DB7DA00441E8F /* TextRecognizerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B22CBC48263F6F3C007F0D39 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				B266D0EB263F123D00B2360F /* AlertView.xib */,
+				B266D0EE263F247E00B2360F /* AlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		B266D0CC263EA8D200B2360F /* UpdateUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UpdateUI;
+			sourceTree = "<group>";
+		};
+		B266D0CF263EAF5D00B2360F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B266D0D0263EAF6E00B2360F /* UserDefaultsExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B266D0D8263EB11500B2360F /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				B266D0D9263EB11500B2360F /* LoadingScreen.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		B29D5D89263DB72200441E8F = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +108,73 @@
 		B29D5D94263DB72200441E8F /* findPill */ = {
 			isa = PBXGroup;
 			children = (
-				B29D5D95263DB72200441E8F /* AppDelegate.swift */,
-				B29D5D97263DB72200441E8F /* SceneDelegate.swift */,
-				B29D5D99263DB72200441E8F /* ViewController.swift */,
-				B29D5D9B263DB72200441E8F /* Main.storyboard */,
-				B29D5D9E263DB72300441E8F /* Assets.xcassets */,
-				B29D5DA0263DB72300441E8F /* LaunchScreen.storyboard */,
+				B266D0CF263EAF5D00B2360F /* Extensions */,
+				B29D5DAA263DB72800441E8F /* Modal */,
+				B29D5DAB263DB73000441E8F /* View */,
+				B29D5DAC263DB73500441E8F /* Controller */,
+				B29D5DAE263DB75800441E8F /* SceneAndAppDelegates */,
 				B29D5DA3263DB72300441E8F /* Info.plist */,
 			);
 			path = findPill;
+			sourceTree = "<group>";
+		};
+		B29D5DAA263DB72800441E8F /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				B266D0CC263EA8D200B2360F /* UpdateUI */,
+				B29D5DB0263DB7BC00441E8F /* TextRecognizerManager */,
+				B266D0D4263EAFA000B2360F /* PillModel.swift */,
+				B266D0E0263EB2EB00B2360F /* Favorites.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		B29D5DAB263DB73000441E8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B266D0D8263EB11500B2360F /* LoadingView */,
+				B29D5D9E263DB72300441E8F /* Assets.xcassets */,
+				B29D5DAD263DB74D00441E8F /* Storyboards */,
+				B266D0E4263EB52B00B2360F /* FavoritesTableViewCell.swift */,
+				B22CBC48263F6F3C007F0D39 /* Alert */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B29D5DAC263DB73500441E8F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B29D5D99263DB72200441E8F /* HomeViewController.swift */,
+				B266D0DD263EB29D00B2360F /* FavoritesViewController.swift */,
+				B266D0E7263EB6B500B2360F /* DrugDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B29D5DAD263DB74D00441E8F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B29D5D9B263DB72200441E8F /* Main.storyboard */,
+				B29D5DA0263DB72300441E8F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B29D5DAE263DB75800441E8F /* SceneAndAppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				B29D5D95263DB72200441E8F /* AppDelegate.swift */,
+				B29D5D97263DB72200441E8F /* SceneDelegate.swift */,
+			);
+			path = SceneAndAppDelegates;
+			sourceTree = "<group>";
+		};
+		B29D5DB0263DB7BC00441E8F /* TextRecognizerManager */ = {
+			isa = PBXGroup;
+			children = (
+				B29D5DB1263DB7DA00441E8F /* TextRecognizerManager.swift */,
+			);
+			path = TextRecognizerManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29D5DA2263DB72300441E8F /* LaunchScreen.storyboard in Resources */,
+				B266D0EC263F123D00B2360F /* AlertView.xib in Resources */,
 				B29D5D9F263DB72300441E8F /* Assets.xcassets in Resources */,
 				B29D5D9D263DB72200441E8F /* Main.storyboard in Resources */,
 			);
@@ -137,8 +248,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B29D5D9A263DB72200441E8F /* ViewController.swift in Sources */,
+				B266D0EF263F247E00B2360F /* AlertView.swift in Sources */,
+				B266D0E1263EB2EB00B2360F /* Favorites.swift in Sources */,
+				B29D5D9A263DB72200441E8F /* HomeViewController.swift in Sources */,
 				B29D5D96263DB72200441E8F /* AppDelegate.swift in Sources */,
+				B266D0E8263EB6B500B2360F /* DrugDetailViewController.swift in Sources */,
+				B266D0DE263EB29D00B2360F /* FavoritesViewController.swift in Sources */,
+				B29D5DB2263DB7DA00441E8F /* TextRecognizerManager.swift in Sources */,
+				B266D0E5263EB52B00B2360F /* FavoritesTableViewCell.swift in Sources */,
+				B266D0DA263EB11500B2360F /* LoadingScreen.swift in Sources */,
+				B266D0D1263EAF6E00B2360F /* UserDefaultsExtension.swift in Sources */,
+				B266D0D5263EAFA000B2360F /* PillModel.swift in Sources */,
 				B29D5D98263DB72200441E8F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
