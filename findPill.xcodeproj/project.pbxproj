@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24C599726446B14003C7A79 /* SelectedDrug.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C599626446B14003C7A79 /* SelectedDrug.swift */; };
 		B266D0D1263EAF6E00B2360F /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D0263EAF6E00B2360F /* UserDefaultsExtension.swift */; };
 		B266D0D5263EAFA000B2360F /* PillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D4263EAFA000B2360F /* PillModel.swift */; };
 		B266D0DA263EB11500B2360F /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D9263EB11500B2360F /* LoadingScreen.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B24C599626446B14003C7A79 /* SelectedDrug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDrug.swift; sourceTree = "<group>"; };
 		B266D0D0263EAF6E00B2360F /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		B266D0D4263EAFA000B2360F /* PillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillModel.swift; sourceTree = "<group>"; };
 		B266D0D9263EB11500B2360F /* LoadingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
@@ -66,11 +68,12 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
-		B266D0CC263EA8D200B2360F /* UpdateUI */ = {
+		B24C599526446AFC003C7A79 /* SelectedDrug */ = {
 			isa = PBXGroup;
 			children = (
+				B24C599626446B14003C7A79 /* SelectedDrug.swift */,
 			);
-			path = UpdateUI;
+			path = SelectedDrug;
 			sourceTree = "<group>";
 		};
 		B266D0CF263EAF5D00B2360F /* Extensions */ = {
@@ -121,7 +124,7 @@
 		B29D5DAA263DB72800441E8F /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				B266D0CC263EA8D200B2360F /* UpdateUI */,
+				B24C599526446AFC003C7A79 /* SelectedDrug */,
 				B29D5DB0263DB7BC00441E8F /* TextRecognizerManager */,
 				B266D0D4263EAFA000B2360F /* PillModel.swift */,
 				B266D0E0263EB2EB00B2360F /* Favorites.swift */,
@@ -135,7 +138,6 @@
 				B266D0D8263EB11500B2360F /* LoadingView */,
 				B29D5D9E263DB72300441E8F /* Assets.xcassets */,
 				B29D5DAD263DB74D00441E8F /* Storyboards */,
-				B266D0E4263EB52B00B2360F /* FavoritesTableViewCell.swift */,
 				B22CBC48263F6F3C007F0D39 /* Alert */,
 			);
 			path = View;
@@ -154,6 +156,7 @@
 		B29D5DAD263DB74D00441E8F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B266D0E4263EB52B00B2360F /* FavoritesTableViewCell.swift */,
 				B29D5D9B263DB72200441E8F /* Main.storyboard */,
 				B29D5DA0263DB72300441E8F /* LaunchScreen.storyboard */,
 			);
@@ -254,6 +257,7 @@
 				B29D5D96263DB72200441E8F /* AppDelegate.swift in Sources */,
 				B266D0E8263EB6B500B2360F /* DrugDetailViewController.swift in Sources */,
 				B266D0DE263EB29D00B2360F /* FavoritesViewController.swift in Sources */,
+				B24C599726446B14003C7A79 /* SelectedDrug.swift in Sources */,
 				B29D5DB2263DB7DA00441E8F /* TextRecognizerManager.swift in Sources */,
 				B266D0E5263EB52B00B2360F /* FavoritesTableViewCell.swift in Sources */,
 				B266D0DA263EB11500B2360F /* LoadingScreen.swift in Sources */,

@@ -9,15 +9,25 @@ import UIKit
 
 class DrugDetailViewController: UIViewController {
 
-    @IBOutlet weak var detailTestLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detailTestLabel.text = "BLABLABLABLABLABLABLABLABLABLABLABLABLABLABLABLBLABLABLABLABLABLABLABLABLABLABLABLABLA About Selected Drug BLAAAAAA"
+       loadData()
 
         // Do any additional setup after loading the view.
     }
     
-
+    func loadData(){
+        if let selectedDrug = SelectedDrug.shared.selectedDrug{
+            nameLabel.text = selectedDrug.name
+            noteLabel.text = selectedDrug.note
+            categoryLabel.text = selectedDrug.category
+            print(selectedDrug)
+        }
+    }
 
 }

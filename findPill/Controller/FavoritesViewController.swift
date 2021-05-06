@@ -28,7 +28,7 @@ class FavoritesViewController: UIViewController {
     private func getDataFromUserDefaults(){
         
         do {
-              favoriteDrugs = try favorites.getObject(forKey: "userFavorites", castTo: [String].self)
+              favoriteDrugs = try favorites.getObject(forKey: "userFavorites", castTo: [PillModel].self)
                 
            
             tableView.reloadData()
@@ -58,7 +58,7 @@ extension FavoritesViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
         
-        cell.textLabel?.text = favoriteDrugs[indexPath.row]
+        cell.textLabel?.text = favoriteDrugs[indexPath.row].name
         
         return cell
     }
@@ -70,6 +70,8 @@ extension FavoritesViewController : UITableViewDelegate,UITableViewDataSource{
         }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        SelectedDrug.shared.selectedDrug = favoriteDrugs[indexPath.row]
         
         performSegue(withIdentifier: "toDetail", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)

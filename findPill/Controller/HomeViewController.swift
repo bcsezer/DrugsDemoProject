@@ -61,41 +61,8 @@ class HomeViewController: UIViewController {
 //        loadDataFromUserDefaults()
 //        addNewItemsOnFavoriteArray()
     }
-    private func loadDataFromUserDefaults(){
-        do{
-            //while the page is loading, I load array from Userdefaults
-            favoritesSkeleton = try favorites.getObject(forKey: "userFavorites", castTo: [String].self)
-           
-        }catch{
-            print(error.localizedDescription)
-        }
-       
-    }
-    private func addNewItemsOnFavoriteArray(){
-     
-            
-            //Check array contains selected news
-        if let text = textLabel.text{
-        if favoritesSkeleton.contains(where: {$0 == text}) {
-                
-            } else {
-                //If it is not, add selected news to favorite userDefaults object
-                
-                do {
-                    favoritesSkeleton.append(text) //Firstly, add selected article array to singleton array
-                    
-                    try favorites.setObject(favoritesSkeleton, forKey: "userFavorites") //Than add to userDefaults
-                    
-                    
-                }catch{
-                    
-                    
-                    print(error.localizedDescription)
-                }
-            }
-           
-        }
-    }
+  
+   
     
 }
 

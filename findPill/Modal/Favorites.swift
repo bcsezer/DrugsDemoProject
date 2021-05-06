@@ -9,5 +9,5 @@ import Foundation
 
 class FavoritesArray{
     static let shared = FavoritesArray()
-    var favoriteArray = [String]()
+    var favoriteArray = [PillModel]()
 }
