@@ -10,6 +10,7 @@ import UIKit
 class FavoritesViewController: UIViewController {
     let favorites = UserDefaults.standard
     var favoriteDrugs = FavoritesArray.shared.favoriteArray
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +52,14 @@ class FavoritesViewController: UIViewController {
 }
 
 extension FavoritesViewController : UITableViewDelegate,UITableViewDataSource{
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteDrugs.count
+        
+        let data = favoriteDrugs.count
+        print(favoriteDrugs,"drug")
+        return data
     }
-    
+ 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
         

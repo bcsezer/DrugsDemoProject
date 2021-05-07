@@ -13,7 +13,7 @@ class AlertView: UIView {
     static let instance = AlertView()
     //MARK:FavoritesArray Singleton class
     var favoritesSkeleton = FavoritesArray.shared.favoriteArray
-    
+    var nameLabel : String?
     //MARK: UserDefaults
     let favorites = UserDefaults.standard
     
@@ -51,14 +51,6 @@ class AlertView: UIView {
         containerView.layer.cornerRadius = 5
         containerView.layer.masksToBounds = true
         
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissView))
-        containerView.addGestureRecognizer(gesture)
-        parentView.addGestureRecognizer(gesture)
-        
-    }
-    
-    @objc func dismissView(){
-        self.endEditing(true)
     }
     
     private func setupTextView(){
@@ -68,7 +60,8 @@ class AlertView: UIView {
     private func setupCategoryList(){
         pickerView.dataSource = self
         pickerView.delegate = self
-        categoriesArray = ["Pain","Heart","Diabeties","Cold","Muscle Pain","Blood Tension","Antibiotic"]
+        textView.delegate  = self
+        categoriesArray = ["Pain","Heart","Diabeties","Cold","Muscle Pain","Blood Tension","Antibiotic","Other"]
     }
    public func showAlert(){
     
@@ -137,3 +130,13 @@ extension AlertView: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 }
 
+extension AlertView: UITextViewDelegate{
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n"
+            {
+                textView.resignFirstResponder()
+                return false
+            }
+            return true
+    }
+}

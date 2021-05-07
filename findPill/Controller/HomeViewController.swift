@@ -58,12 +58,10 @@ class HomeViewController: UIViewController {
     }
     @IBAction func addToFavoritesButtonClicked(_ sender: Any) {
         AlertView.instance.showAlert()
-//        loadDataFromUserDefaults()
-//        addNewItemsOnFavoriteArray()
+        AlertView.instance.drugName.text = textLabel.text
+
     }
   
-   
-    
 }
 
 extension HomeViewController : TextRecognizerManagerDelegate{

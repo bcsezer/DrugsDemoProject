@@ -47,7 +47,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" text="Notunu Buraya yazabilir" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3M-lU-Epq">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Notunu Buraya yazabilir" translatesAutoresizingMaskIntoConstraints="NO" id="B3M-lU-Epq">
                                                     <rect key="frame" x="8" y="21" width="358" height="196"/>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,7 +57,7 @@
                                                     </constraints>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                                 </textView>
                                             </subviews>
                                         </stackView>
