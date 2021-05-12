@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView" customModule="findPill" customModuleProvider="target">
             <connections>
                 <outlet property="categoryTextField" destination="oIv-wq-9F1" id="cy4-y9-NmS"/>
+                <outlet property="checkContainer" destination="XBg-DA-irb" id="pla-Z2-exR"/>
+                <outlet property="checkImage" destination="CdF-uP-aNa" id="x1c-jz-dPt"/>
                 <outlet property="containerView" destination="c5X-0Z-yZl" id="Jyb-2x-nu0"/>
                 <outlet property="doneButton" destination="7ka-xz-Pgf" id="Fb9-xJ-AdC"/>
                 <outlet property="drugName" destination="4GT-8a-KJc" id="7FF-Nn-qQ6"/>
@@ -27,6 +29,25 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjb-ru-zzq">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBg-DA-irb" userLabel="checkMarkContainer">
+                            <rect key="frame" x="107" y="348" width="200" height="200"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CdF-uP-aNa">
+                                    <rect key="frame" x="25" y="25" width="150" height="150"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="3Q0-Ki-DuD"/>
+                                        <constraint firstAttribute="width" constant="150" id="BSO-70-bXq"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="CdF-uP-aNa" firstAttribute="centerY" secondItem="XBg-DA-irb" secondAttribute="centerY" id="C1k-oy-frN"/>
+                                <constraint firstItem="CdF-uP-aNa" firstAttribute="centerX" secondItem="XBg-DA-irb" secondAttribute="centerX" id="Sj8-hL-AZp"/>
+                                <constraint firstAttribute="width" constant="200" id="Ycc-1V-ZgX"/>
+                                <constraint firstAttribute="height" constant="200" id="iy3-tP-D3d"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5X-0Z-yZl">
                             <rect key="frame" x="20" y="181" width="374" height="535"/>
                             <subviews>
@@ -47,15 +68,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Notunu Buraya yazabilir" translatesAutoresizingMaskIntoConstraints="NO" id="B3M-lU-Epq">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Notunu Buraya yazabilirsin" translatesAutoresizingMaskIntoConstraints="NO" id="B3M-lU-Epq">
                                                     <rect key="frame" x="8" y="21" width="358" height="196"/>
-                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="358" id="jGq-Jm-hWV"/>
                                                         <constraint firstAttribute="height" constant="196" id="kjL-Y0-bjj"/>
                                                     </constraints>
-                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                                 </textView>
@@ -136,8 +157,10 @@
                     <color key="backgroundColor" white="0.0" alpha="0.59861288265306123" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="c5X-0Z-yZl" secondAttribute="bottom" constant="180" id="LkM-B3-hva"/>
+                        <constraint firstItem="XBg-DA-irb" firstAttribute="centerY" secondItem="Gjb-ru-zzq" secondAttribute="centerY" id="NuO-CJ-SrI"/>
                         <constraint firstItem="c5X-0Z-yZl" firstAttribute="top" secondItem="Gjb-ru-zzq" secondAttribute="top" constant="181" id="aDM-Pm-Vf4"/>
                         <constraint firstItem="c5X-0Z-yZl" firstAttribute="leading" secondItem="Gjb-ru-zzq" secondAttribute="leading" constant="20" id="rCN-lL-f6U"/>
+                        <constraint firstItem="XBg-DA-irb" firstAttribute="centerX" secondItem="Gjb-ru-zzq" secondAttribute="centerX" id="tgL-s2-iz2"/>
                         <constraint firstAttribute="trailing" secondItem="c5X-0Z-yZl" secondAttribute="trailing" constant="20" id="v5r-Sy-CAL"/>
                     </constraints>
                 </view>
@@ -154,14 +177,11 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

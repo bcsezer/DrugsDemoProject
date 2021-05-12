@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29BACE2AE5D3E0507CC82885 /* Pods_findPill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77451D8F3281E78923A10C35 /* Pods_findPill.framework */; };
 		B24C599726446B14003C7A79 /* SelectedDrug.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C599626446B14003C7A79 /* SelectedDrug.swift */; };
 		B266D0D1263EAF6E00B2360F /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D0263EAF6E00B2360F /* UserDefaultsExtension.swift */; };
 		B266D0D5263EAFA000B2360F /* PillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D4263EAFA000B2360F /* PillModel.swift */; };
@@ -17,6 +18,7 @@
 		B266D0E8263EB6B500B2360F /* DrugDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0E7263EB6B500B2360F /* DrugDetailViewController.swift */; };
 		B266D0EC263F123D00B2360F /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B266D0EB263F123D00B2360F /* AlertView.xib */; };
 		B266D0EF263F247E00B2360F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0EE263F247E00B2360F /* AlertView.swift */; };
+		B28AA351264C5B5F00AA6151 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = B28AA350264C5B5F00AA6151 /* giphy.gif */; };
 		B29D5D96263DB72200441E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5D95263DB72200441E8F /* AppDelegate.swift */; };
 		B29D5D98263DB72200441E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5D97263DB72200441E8F /* SceneDelegate.swift */; };
 		B29D5D9A263DB72200441E8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5D99263DB72200441E8F /* HomeViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EC46C6FD7ACFEDB6CBF4860 /* Pods-findPill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findPill.debug.xcconfig"; path = "Target Support Files/Pods-findPill/Pods-findPill.debug.xcconfig"; sourceTree = "<group>"; };
+		77451D8F3281E78923A10C35 /* Pods_findPill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findPill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24C599626446B14003C7A79 /* SelectedDrug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDrug.swift; sourceTree = "<group>"; };
 		B266D0D0263EAF6E00B2360F /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		B266D0D4263EAFA000B2360F /* PillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillModel.swift; sourceTree = "<group>"; };
@@ -37,6 +41,7 @@
 		B266D0E7263EB6B500B2360F /* DrugDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetailViewController.swift; sourceTree = "<group>"; };
 		B266D0EB263F123D00B2360F /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		B266D0EE263F247E00B2360F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		B28AA350264C5B5F00AA6151 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		B29D5D92263DB72200441E8F /* findPill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findPill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29D5D95263DB72200441E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B29D5D97263DB72200441E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		B29D5DA1263DB72300441E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B29D5DA3263DB72300441E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B29D5DB1263DB7DA00441E8F /* TextRecognizerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizerManager.swift; sourceTree = "<group>"; };
+		E44FF0CBAA4DF5D299E78681 /* Pods-findPill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findPill.release.xcconfig"; path = "Target Support Files/Pods-findPill/Pods-findPill.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +59,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BACE2AE5D3E0507CC82885 /* Pods_findPill.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6807E8E35638EB0D04256F04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77451D8F3281E78923A10C35 /* Pods_findPill.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9692B75D6AE01195AA708028 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EC46C6FD7ACFEDB6CBF4860 /* Pods-findPill.debug.xcconfig */,
+				E44FF0CBAA4DF5D299E78681 /* Pods-findPill.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B22CBC48263F6F3C007F0D39 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +121,8 @@
 			children = (
 				B29D5D94263DB72200441E8F /* findPill */,
 				B29D5D93263DB72200441E8F /* Products */,
+				9692B75D6AE01195AA708028 /* Pods */,
+				6807E8E35638EB0D04256F04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +163,7 @@
 			children = (
 				B266D0D8263EB11500B2360F /* LoadingView */,
 				B29D5D9E263DB72300441E8F /* Assets.xcassets */,
+				B28AA350264C5B5F00AA6151 /* giphy.gif */,
 				B29D5DAD263DB74D00441E8F /* Storyboards */,
 				B22CBC48263F6F3C007F0D39 /* Alert */,
 			);
@@ -187,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B29D5DA6263DB72300441E8F /* Build configuration list for PBXNativeTarget "findPill" */;
 			buildPhases = (
+				417B88EB04BD093A7D67F340 /* [CP] Check Pods Manifest.lock */,
 				B29D5D8E263DB72200441E8F /* Sources */,
 				B29D5D8F263DB72200441E8F /* Frameworks */,
 				B29D5D90263DB72200441E8F /* Resources */,
+				0154ECF7E6B3D6057345F478 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,11 +269,54 @@
 				B29D5DA2263DB72300441E8F /* LaunchScreen.storyboard in Resources */,
 				B266D0EC263F123D00B2360F /* AlertView.xib in Resources */,
 				B29D5D9F263DB72300441E8F /* Assets.xcassets in Resources */,
+				B28AA351264C5B5F00AA6151 /* giphy.gif in Resources */,
 				B29D5D9D263DB72200441E8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0154ECF7E6B3D6057345F478 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-findPill/Pods-findPill-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-findPill/Pods-findPill-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-findPill/Pods-findPill-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		417B88EB04BD093A7D67F340 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-findPill-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B29D5D8E263DB72200441E8F /* Sources */ = {
@@ -407,6 +479,7 @@
 		};
 		B29D5DA7263DB72300441E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC46C6FD7ACFEDB6CBF4860 /* Pods-findPill.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -426,6 +499,7 @@
 		};
 		B29D5DA8263DB72300441E8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44FF0CBAA4DF5D299E78681 /* Pods-findPill.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

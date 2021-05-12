@@ -8,16 +8,30 @@
 import UIKit
 import Vision
 
-class HomeViewController: UIViewController {
+
+class HomeViewController: UIViewController, UpdateUIDelegate {
+    
+    func didUpdateUI(label: String, InitialImage: String, button: Bool) {
+        DispatchQueue.main.async {
+            self.textLabel.text = label
+            self.imageView.image = UIImage(named: InitialImage)
+            self.saveName.isHidden = button
+        }
+    }
+    
+   
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var saveName: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
     
-    //Classes
+    //MARK:Classes
     let textRecognitionManager = TextRecognizerManager()
     var loading = LoadingScreen()
-    
+   
+   
+
     //MARK:FavoritesArray Singleton class
     var favoritesSkeleton = FavoritesArray.shared.favoriteArray
     
@@ -27,6 +41,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
+        AlertView.instance.delegate = self
         imageView.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(clickImage))
         imageView.addGestureRecognizer(gesture)
@@ -57,12 +72,14 @@ class HomeViewController: UIViewController {
         saveName.layer.borderColor = #colorLiteral(red: 0.1269942271, green: 1, blue: 0.2875748878, alpha: 1)
     }
     @IBAction func addToFavoritesButtonClicked(_ sender: Any) {
+     
         AlertView.instance.showAlert()
         AlertView.instance.drugName.text = textLabel.text
 
     }
   
 }
+
 
 extension HomeViewController : TextRecognizerManagerDelegate{
     
@@ -82,6 +99,7 @@ extension HomeViewController : TextRecognizerManagerDelegate{
                 self.loading.showUniversalLoadingView(false)
                 self.saveName.isHidden = true
                 self.infoLabel.text = "Click on the picture icon above to get the name of the drug."
+                
                 
             }
         }

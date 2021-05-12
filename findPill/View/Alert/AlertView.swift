@@ -7,15 +7,25 @@
 
 import Foundation
 import UIKit
+import SwiftGifOrigin
 
+protocol UpdateUIDelegate:AnyObject {
+    func didUpdateUI(label:String,InitialImage:String,button:Bool)
+}
 class AlertView: UIView {
-    
+    var mainImage:String!
+    var textLabel:String!
+    var favButton:Bool!
     static let instance = AlertView()
     //MARK:FavoritesArray Singleton class
     var favoritesSkeleton = FavoritesArray.shared.favoriteArray
     var nameLabel : String?
     //MARK: UserDefaults
     let favorites = UserDefaults.standard
+    weak var delegate: UpdateUIDelegate?
+    let vc = HomeViewController()
+    
+    @IBOutlet weak var checkImage: UIImageView!
     
     @IBOutlet var parentView: UIView!
     @IBOutlet weak var drugName: UILabel!
@@ -24,6 +34,7 @@ class AlertView: UIView {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var checkContainer: UIView!
     
     var categoriesArray = [String]()
     
@@ -33,6 +44,7 @@ class AlertView: UIView {
         setupInıt()
         setupTextView()
         setupCategoryList()
+     
     }
     
     required init?(coder: NSCoder) {
@@ -50,6 +62,8 @@ class AlertView: UIView {
         parentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         containerView.layer.cornerRadius = 5
         containerView.layer.masksToBounds = true
+        checkContainer.layer.cornerRadius = 5
+        checkContainer.layer.masksToBounds = true
         
     }
     
@@ -64,15 +78,34 @@ class AlertView: UIView {
         categoriesArray = ["Pain","Heart","Diabeties","Cold","Muscle Pain","Blood Tension","Antibiotic","Other"]
     }
    public func showAlert(){
-    
+    containerView.isHidden = false
     UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.addSubview(parentView)
        
     }
+    
     @IBAction func doneButtonCliked(_ sender: Any) {
         loadDataFromUserDefaults()
         addNewItemsOnFavoriteArray()
-        parentView.removeFromSuperview()
+        containerView.isHidden = true
+        checkImage.loadGif(name: "giphy")
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.clearUI()
+            self.parentView.removeFromSuperview()
+            
+        }
+       
+        
     }
+    func clearUI(){
+        
+        mainImage = "chooseAnImage"
+        textLabel = "Click on the picture icon above to get the name of the drug."
+        favButton = true
+        
+        self.delegate?.didUpdateUI(label: self.textLabel, InitialImage: self.mainImage, button: self.favButton)
+        
+      }
     
     private func loadDataFromUserDefaults(){
         do{
@@ -131,12 +164,22 @@ extension AlertView: UIPickerViewDataSource, UIPickerViewDelegate {
 }
 
 extension AlertView: UITextViewDelegate{
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        
+       if textView.text != ""{
+        
+            textView.text = ""
+        
+        }
+    }
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
         if text == "\n"
             {
                 textView.resignFirstResponder()
                 return false
-            }
+        }
             return true
     }
 }
