@@ -27,6 +27,7 @@ class AlertView: UIView {
     
     @IBOutlet weak var checkImage: UIImageView!
     
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet var parentView: UIView!
     @IBOutlet weak var drugName: UILabel!
     @IBOutlet weak var categoryTextField: UITextField!
@@ -70,6 +71,8 @@ class AlertView: UIView {
     private func setupTextView(){
         textView.layer.cornerRadius = 3
         textView.layer.masksToBounds = true
+        closeButton.layer.cornerRadius = 0.5 * closeButton.bounds.size.width
+            closeButton.clipsToBounds = true
     }
     private func setupCategoryList(){
         pickerView.dataSource = self
@@ -77,9 +80,17 @@ class AlertView: UIView {
         textView.delegate  = self
         categoriesArray = ["Pain","Heart","Diabeties","Cold","Muscle Pain","Blood Tension","Antibiotic","Other"]
     }
+    
    public func showAlert(){
+    
     containerView.isHidden = false
     UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.addSubview(parentView)
+    
+    UIView.animate(withDuration: 0.3, animations: {
+        self.parentView.alpha = 1
+    })
+   
+   
        
     }
     
@@ -96,6 +107,15 @@ class AlertView: UIView {
         }
        
         
+    }
+    @IBAction func closeButtonClicked(_ sender: Any) {
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.parentView.alpha = 0
+        }) { (finished) in
+            self.parentView.removeFromSuperview()
+        }
+       
     }
     func clearUI(){
         

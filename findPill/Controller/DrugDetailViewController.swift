@@ -29,5 +29,8 @@ class DrugDetailViewController: UIViewController {
             print(selectedDrug)
         }
     }
-
+    @IBAction func sideEffectButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toSideEffects", sender: self)
+    }
+    
 }

@@ -9,17 +9,8 @@ import UIKit
 import Vision
 
 
-class HomeViewController: UIViewController, UpdateUIDelegate {
+class HomeViewController: UIViewController {
     
-    func didUpdateUI(label: String, InitialImage: String, button: Bool) {
-        DispatchQueue.main.async {
-            self.textLabel.text = label
-            self.imageView.image = UIImage(named: InitialImage)
-            self.saveName.isHidden = button
-        }
-    }
-    
-   
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
@@ -78,6 +69,18 @@ class HomeViewController: UIViewController, UpdateUIDelegate {
 
     }
   
+}
+extension HomeViewController : UpdateUIDelegate{
+    func didUpdateUI(label: String, InitialImage: String, button: Bool) {
+        DispatchQueue.main.async {
+            self.textLabel.text = ""
+            self.infoLabel.text = label
+            self.imageView.image = UIImage(named: InitialImage)
+            self.saveName.isHidden = button
+        }
+    }
+    
+    
 }
 
 
