@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		29BACE2AE5D3E0507CC82885 /* Pods_findPill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77451D8F3281E78923A10C35 /* Pods_findPill.framework */; };
+		B223D94C2655125900FE9682 /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B223D94B2655125900FE9682 /* PresentationViewController.swift */; };
+		B223D9502655129A00FE9682 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B223D94F2655129A00FE9682 /* OverlayView.swift */; };
+		B223D954265512C600FE9682 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B223D953265512C600FE9682 /* OverlayView.xib */; };
 		B24C599726446B14003C7A79 /* SelectedDrug.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C599626446B14003C7A79 /* SelectedDrug.swift */; };
+		B24C8F8F26EB7C11005E93FE /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C8F8E26EB7C11005E93FE /* ModalPresentationController.swift */; };
+		B24C8F9126EB7C66005E93FE /* ModalTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C8F9026EB7C66005E93FE /* ModalTransitioningDelegate.swift */; };
+		B24C8F9326EB7D00005E93FE /* PushModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C8F9226EB7D00005E93FE /* PushModal.swift */; };
 		B25F92A2264D1B9700CBB6D7 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F92A1264D1B9700CBB6D7 /* ApiManager.swift */; };
-		B25F92A5264D1D5700CBB6D7 /* DrugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F92A4264D1D5700CBB6D7 /* DrugData.swift */; };
 		B266D0D1263EAF6E00B2360F /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D0263EAF6E00B2360F /* UserDefaultsExtension.swift */; };
 		B266D0D5263EAFA000B2360F /* PillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D4263EAFA000B2360F /* PillModel.swift */; };
 		B266D0DA263EB11500B2360F /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0D9263EB11500B2360F /* LoadingScreen.swift */; };
@@ -18,8 +23,8 @@
 		B266D0E1263EB2EB00B2360F /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0E0263EB2EB00B2360F /* Favorites.swift */; };
 		B266D0E5263EB52B00B2360F /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0E4263EB52B00B2360F /* FavoritesTableViewCell.swift */; };
 		B266D0E8263EB6B500B2360F /* DrugDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0E7263EB6B500B2360F /* DrugDetailViewController.swift */; };
-		B266D0EC263F123D00B2360F /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B266D0EB263F123D00B2360F /* AlertView.xib */; };
-		B266D0EF263F247E00B2360F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266D0EE263F247E00B2360F /* AlertView.swift */; };
+		B26841D126515F5F0097CD6B /* SecondTypeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26841D026515F5F0097CD6B /* SecondTypeAlert.swift */; };
+		B2813BDD264FB72E00047E2E /* DrugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2813BDC264FB72E00047E2E /* DrugData.swift */; };
 		B28AA351264C5B5F00AA6151 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = B28AA350264C5B5F00AA6151 /* giphy.gif */; };
 		B29D5D96263DB72200441E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5D95263DB72200441E8F /* AppDelegate.swift */; };
 		B29D5D98263DB72200441E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D5D97263DB72200441E8F /* SceneDelegate.swift */; };
@@ -33,9 +38,14 @@
 /* Begin PBXFileReference section */
 		0EC46C6FD7ACFEDB6CBF4860 /* Pods-findPill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findPill.debug.xcconfig"; path = "Target Support Files/Pods-findPill/Pods-findPill.debug.xcconfig"; sourceTree = "<group>"; };
 		77451D8F3281E78923A10C35 /* Pods_findPill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findPill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B223D94B2655125900FE9682 /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
+		B223D94F2655129A00FE9682 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		B223D953265512C600FE9682 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		B24C599626446B14003C7A79 /* SelectedDrug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDrug.swift; sourceTree = "<group>"; };
+		B24C8F8E26EB7C11005E93FE /* ModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
+		B24C8F9026EB7C66005E93FE /* ModalTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransitioningDelegate.swift; sourceTree = "<group>"; };
+		B24C8F9226EB7D00005E93FE /* PushModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushModal.swift; sourceTree = "<group>"; };
 		B25F92A1264D1B9700CBB6D7 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		B25F92A4264D1D5700CBB6D7 /* DrugData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugData.swift; sourceTree = "<group>"; };
 		B266D0D0263EAF6E00B2360F /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		B266D0D4263EAFA000B2360F /* PillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillModel.swift; sourceTree = "<group>"; };
 		B266D0D9263EB11500B2360F /* LoadingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
@@ -43,8 +53,8 @@
 		B266D0E0263EB2EB00B2360F /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		B266D0E4263EB52B00B2360F /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		B266D0E7263EB6B500B2360F /* DrugDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetailViewController.swift; sourceTree = "<group>"; };
-		B266D0EB263F123D00B2360F /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
-		B266D0EE263F247E00B2360F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		B26841D026515F5F0097CD6B /* SecondTypeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTypeAlert.swift; sourceTree = "<group>"; };
+		B2813BDC264FB72E00047E2E /* DrugData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugData.swift; sourceTree = "<group>"; };
 		B28AA350264C5B5F00AA6151 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		B29D5D92263DB72200441E8F /* findPill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findPill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29D5D95263DB72200441E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,11 +97,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B223D94E2655127C00FE9682 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				B223D94F2655129A00FE9682 /* OverlayView.swift */,
+				B223D953265512C600FE9682 /* OverlayView.xib */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
 		B22CBC48263F6F3C007F0D39 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				B266D0EB263F123D00B2360F /* AlertView.xib */,
-				B266D0EE263F247E00B2360F /* AlertView.swift */,
+				B26841D026515F5F0097CD6B /* SecondTypeAlert.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -102,6 +120,16 @@
 				B24C599626446B14003C7A79 /* SelectedDrug.swift */,
 			);
 			path = SelectedDrug;
+			sourceTree = "<group>";
+		};
+		B24C8F8D26EB7BF0005E93FE /* ModalPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				B24C8F8E26EB7C11005E93FE /* ModalPresentationController.swift */,
+				B24C8F9026EB7C66005E93FE /* ModalTransitioningDelegate.swift */,
+				B24C8F9226EB7D00005E93FE /* PushModal.swift */,
+			);
+			path = ModalPresentation;
 			sourceTree = "<group>";
 		};
 		B266D0CF263EAF5D00B2360F /* Extensions */ = {
@@ -159,7 +187,7 @@
 				B266D0D4263EAFA000B2360F /* PillModel.swift */,
 				B266D0E0263EB2EB00B2360F /* Favorites.swift */,
 				B25F92A1264D1B9700CBB6D7 /* ApiManager.swift */,
-				B25F92A4264D1D5700CBB6D7 /* DrugData.swift */,
+				B2813BDC264FB72E00047E2E /* DrugData.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -167,6 +195,8 @@
 		B29D5DAB263DB73000441E8F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B24C8F8D26EB7BF0005E93FE /* ModalPresentation */,
+				B223D94E2655127C00FE9682 /* Overlay */,
 				B266D0D8263EB11500B2360F /* LoadingView */,
 				B29D5D9E263DB72300441E8F /* Assets.xcassets */,
 				B28AA350264C5B5F00AA6151 /* giphy.gif */,
@@ -182,6 +212,7 @@
 				B29D5D99263DB72200441E8F /* HomeViewController.swift */,
 				B266D0DD263EB29D00B2360F /* FavoritesViewController.swift */,
 				B266D0E7263EB6B500B2360F /* DrugDetailViewController.swift */,
+				B223D94B2655125900FE9682 /* PresentationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,7 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29D5DA2263DB72300441E8F /* LaunchScreen.storyboard in Resources */,
-				B266D0EC263F123D00B2360F /* AlertView.xib in Resources */,
+				B223D954265512C600FE9682 /* OverlayView.xib in Resources */,
 				B29D5D9F263DB72300441E8F /* Assets.xcassets in Resources */,
 				B28AA351264C5B5F00AA6151 /* giphy.gif in Resources */,
 				B29D5D9D263DB72200441E8F /* Main.storyboard in Resources */,
@@ -329,21 +360,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B266D0EF263F247E00B2360F /* AlertView.swift in Sources */,
 				B266D0E1263EB2EB00B2360F /* Favorites.swift in Sources */,
 				B29D5D9A263DB72200441E8F /* HomeViewController.swift in Sources */,
 				B29D5D96263DB72200441E8F /* AppDelegate.swift in Sources */,
+				B24C8F9326EB7D00005E93FE /* PushModal.swift in Sources */,
 				B266D0E8263EB6B500B2360F /* DrugDetailViewController.swift in Sources */,
 				B266D0DE263EB29D00B2360F /* FavoritesViewController.swift in Sources */,
-				B25F92A5264D1D5700CBB6D7 /* DrugData.swift in Sources */,
+				B26841D126515F5F0097CD6B /* SecondTypeAlert.swift in Sources */,
+				B2813BDD264FB72E00047E2E /* DrugData.swift in Sources */,
 				B24C599726446B14003C7A79 /* SelectedDrug.swift in Sources */,
+				B223D9502655129A00FE9682 /* OverlayView.swift in Sources */,
 				B29D5DB2263DB7DA00441E8F /* TextRecognizerManager.swift in Sources */,
 				B266D0E5263EB52B00B2360F /* FavoritesTableViewCell.swift in Sources */,
 				B266D0DA263EB11500B2360F /* LoadingScreen.swift in Sources */,
+				B24C8F9126EB7C66005E93FE /* ModalTransitioningDelegate.swift in Sources */,
 				B25F92A2264D1B9700CBB6D7 /* ApiManager.swift in Sources */,
+				B24C8F8F26EB7C11005E93FE /* ModalPresentationController.swift in Sources */,
 				B266D0D1263EAF6E00B2360F /* UserDefaultsExtension.swift in Sources */,
 				B266D0D5263EAFA000B2360F /* PillModel.swift in Sources */,
 				B29D5D98263DB72200441E8F /* SceneDelegate.swift in Sources */,
+				B223D94C2655125900FE9682 /* PresentationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

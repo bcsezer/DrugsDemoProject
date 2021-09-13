@@ -63,7 +63,7 @@ extension FavoritesViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
         
-        cell.textLabel?.text = favoriteDrugs[indexPath.row].name
+        cell.drugName.text = favoriteDrugs[indexPath.row].name
         
         return cell
     }

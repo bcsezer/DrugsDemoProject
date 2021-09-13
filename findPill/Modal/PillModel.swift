@@ -9,7 +9,9 @@ import Foundation
 
 
 struct PillModel : Codable {
+    
     var name:String?
     var note:String?
     var category:String?
+    
 }

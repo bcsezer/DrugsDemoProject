@@ -11,6 +11,7 @@ import UIKit
 
 protocol  TextRecognizerManagerDelegate:AnyObject{
     func didStartTextRecognition(detectedWord:String)
+    func errorOccurs(error:String)
 }
 
 
@@ -39,15 +40,13 @@ class TextRecognizerManager{
                 $0.topCandidates(1).first?.string
             })
             
-            for name in textArray{
-                if name.contains("®"){
-                    self.text = name
-                }else{
-                   print(name)
-                }
+           
+            guard let name = textArray.first(where:{$0.contains("®")}) else {
+                self.delegate?.errorOccurs(error: "Error")
+                return
             }
-            
-            self.delegate?.didStartTextRecognition(detectedWord: self.text)
+            print(name,"Name")
+            self.delegate?.didStartTextRecognition(detectedWord: self.removeCharactersFromString(textFromResult: name))
         }
         
         //PRocess Request
@@ -56,6 +55,18 @@ class TextRecognizerManager{
         }catch{
             print(error.localizedDescription)
         }
+    }
+    
+    func removeCharactersFromString(textFromResult:String)-> String{
+        self.text = textFromResult
+        let ignoredStrings: Set<Character> = ["%", "®", "1", "2", "3","4","6","5","7","8","9","0"]
+        
+        self.text.removeAll(where: { ignoredStrings.contains($0) })
+        print(text,"removedan sonra")
+        self.text = self.text.replacingOccurrences(of: "Mg", with: "").replacingOccurrences(of: "mg", with: "").replacingOccurrences(of: "MG", with: "")
+        print(text,"replace den sonra")
+        
+        return self.text
     }
     
 }

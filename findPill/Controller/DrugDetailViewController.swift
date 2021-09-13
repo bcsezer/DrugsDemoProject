@@ -10,7 +10,12 @@ import UIKit
 class DrugDetailViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var noteLabel: UILabel!
+    
+    @IBOutlet weak var noteLabel: UITextView!{
+        didSet{
+            noteLabel.text = ""
+        }
+    }
     @IBOutlet weak var categoryLabel: UILabel!
   
     override func viewDidLoad() {

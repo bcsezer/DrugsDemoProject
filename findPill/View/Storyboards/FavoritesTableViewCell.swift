@@ -9,6 +9,7 @@ import UIKit
 
 class FavoritesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var drugName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

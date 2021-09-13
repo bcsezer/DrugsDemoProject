@@ -16,12 +16,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var saveName: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
-    
+   
     //MARK:Classes
     let textRecognitionManager = TextRecognizerManager()
     var loading = LoadingScreen()
-   
-   
+    let overlayView = OverlayView()
+    
 
     //MARK:FavoritesArray Singleton class
     var favoritesSkeleton = FavoritesArray.shared.favoriteArray
@@ -32,14 +32,29 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
-        AlertView.instance.delegate = self
+        
+        
         imageView.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(clickImage))
         imageView.addGestureRecognizer(gesture)
         textRecognitionManager.delegate = self
         infoLabel.text = "Click on the picture icon above to get the name of the drug."
        
+      
+        
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+  
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("gidiyorum")
     }
     @objc func clickImage(){
         pickImage()
@@ -64,54 +79,60 @@ class HomeViewController: UIViewController {
     }
     @IBAction func addToFavoritesButtonClicked(_ sender: Any) {
      
-        AlertView.instance.showAlert()
-        AlertView.instance.drugName.text = textLabel.text
-
+        showMiracle()
     }
+    
+    private func clearUI(){
+    
+        self.textLabel.text = ""
+        self.infoLabel.text = "Click on the picture icon above to get the name of the drug."
+        self.imageView.image = UIImage(named: "chooseAnImage")
+        self.saveName.isHidden = true
+       }
   
-}
-extension HomeViewController : UpdateUIDelegate{
-    func didUpdateUI(label: String, InitialImage: String, button: Bool) {
-        DispatchQueue.main.async {
-            self.textLabel.text = ""
-            self.infoLabel.text = label
-            self.imageView.image = UIImage(named: InitialImage)
-            self.saveName.isHidden = button
-        }
-    }
-    
-    
 }
 
 
 extension HomeViewController : TextRecognizerManagerDelegate{
+    func errorOccurs(error: String) {
+        
+        DispatchQueue.main.async {
+            self.textLabel.text =  "Please try again. Make sure the camera is focused on the text."
+            self.loading.showUniversalLoadingView(false)
+            self.saveName.isHidden = true
+            self.infoLabel.text = "Click on the picture icon above to get the name of the drug."
+            
+        }
+    }
+    
     
     func didStartTextRecognition(detectedWord: String) {
         
-        if  detectedWord != ""  {
+       
             DispatchQueue.main.async {
-                self.textLabel.text =  String(detectedWord.dropLast())
+                self.textLabel.text =  detectedWord
                 self.loading.showUniversalLoadingView(false)
                 self.saveName.isHidden = false
                 self.infoLabel.text = "If you want you can add this drug to your favorites!"
                 
             }
-        }else{
-            DispatchQueue.main.async {
-                self.textLabel.text =  "Please try again. Make sure the camera is focused on the text."
-                self.loading.showUniversalLoadingView(false)
-                self.saveName.isHidden = true
-                self.infoLabel.text = "Click on the picture icon above to get the name of the drug."
-                
-                
-            }
-        }
+        
        
+    }
+
+    @objc func showMiracle() {
+        let slideVC = overlayView
+        pushModal.pushModal(viewController: slideVC ,animated: true, heightRatio: 0.9, isPan: true, isPanEnabled: true, navigation: self.navigationController!)
+        
     }
     
     
 }
-
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
 extension HomeViewController : UIImagePickerControllerDelegate & UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)

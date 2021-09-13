@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol ApiManagerDelegate:AnyObject {
-    func didSelectSideEffect()
+    func didSelectSideEffect(drugData:DrugData)
 }
 class ApiManager{
     
@@ -30,7 +30,8 @@ class ApiManager{
 
                    do{
                        let data = try JSONDecoder().decode(DrugData.self, from: data!)
-                    print(data.meta)
+                    self.delegate?.didSelectSideEffect(drugData: data)
+                       
                       
                    }catch{
                        debugPrint(error)
